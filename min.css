@@ -1,0 +1,59 @@
+.calendar {
+    border: 2px solid #333;
+    padding: 20px;
+    margin: 20px 0;
+    max-width: 400px;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: 5px;
+}
+
+.calendar-header {
+    text-align: center;
+    font-weight: bold;
+}
+
+.calendar-day {
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.calendar-day:hover {
+    background-color: #f0f0f0;
+}
+
+.schedule-planner {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+.event-input-box {
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #f7f7f7;
+    margin-top: 20px;
+}
+
+.event-input-box label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.event-input-box .event-input {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+}
+
+.event-input-box .add-event-button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-top: 10px;
+}
