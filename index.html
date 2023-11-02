@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>홈페이지</title>
+    <style>
+        body {
+            background-color: white;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .header {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: inline-block;
+        }
+
+        .search-box {
+            display: inline-block;
+            margin-left: 10px;
+        }
+
+        .search-input {
+            padding: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .search-button {
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+
+        .nav-links {
+            display: inline-block;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links li {
+            display: inline-block;
+            margin-left: 10px;
+        }
+
+        .content-box {
+            display: flex;
+        }
+
+        .menu-box {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .menu-item {
+            margin-bottom: 10px;
+        }
+
+        .calendar {
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+
+        .date-selector {
+            margin-bottom: 10px;
+        }
+
+        .event-input {
+            width: 100%;
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+
+        .notice-box {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-left: 10px;
+            flex: 1;
+        }
+
+        .notice-item {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">LOGO글씨</div>
+        <div class="search-box">
+            <input type="text" class="search-input" placeholder="검색어를 입력하세요">
+            <button class="search-button">검색</button>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#" style="color: white;">HOME</a></li>
+            <li><a href="#" style="color: white;"> 로그인</a></li>
+            <li><a href="#" style="color: white;">회원가입</a></li>
+        </ul>
+    </div>
+
+    <div class="content-box">
+        <div class="menu-box">
+            <div class="menu-item"><a href="#">일정관리</a></div>
+            <div class="menu-item"><a href="#">팀 관리</a></div>
+            <div class="menu-item"><a href="#">공간 대여</a></div>
+        </div>
+
+        <div class="menu-box">
+            <div class="calendar">
+                <div class="date-selector">
+                    <input type="date" class="event-input">
+                </div>
+            </div>
+        </div>
+
+    
+        <div class="notice-box">
+            <div class="notice-item">공지사항 내용</div>
+            <div class="notice-item">공지사항 내용</div>
+            <div class="notice-item">공지사항 내용</div>
+        </div>
+    </div>
+    <div class="menu-box">
+    
+        
+        <div class="event-input-box">
+            <label for="event">일정 입력:</label>
+            <input type="text" id="event" class="event-input" placeholder="일정을 입력하세요">
+            <button class="add-event-button">추가</button>
+        </div>
+    </div>
+</body>
+</html>
