@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>일정관리 메인페이지</title>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<link rel="stylesheet" href="styles.css">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+</head>
+<body>
+
+<header>
+    <div class="search-container">
+        <input type="text" placeholder="검색" name="search">
+        <button type="submit">검색</button>
+    </div>
+    <div class="user-authentication">
+        <a href="sign in.html">로그인</a> | <a href="/sign up.html">회원가입</a>
+    </div>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="#">일정관리</a></li>
+        <li><a href="#">팀관리</a></li>
+        <li><a href="#">공간대여</a></li>
+    </ul>
+</nav>
+
+<section class="cards-container">
+    <div class="card" id="card1">
+        <div id="calendar"></div>
+    </div>
+    <div class="card" id="card2">
+        <p>일정칸</p>
+        <!-- 여기에 일정 관련 콘텐츠를 추가할 수 있습니다. -->
+    </div>
+</section>
+
+
+<aside>
+    <h3>공지사항</h3>
+    <ol>
+        <li>일정칸: 일정리스트, 새 일정 등록, 기능 개발 중</li>
+        <li>캘린더 보기</li>
+        <li>일정 조율 (생성, 수정, 삭제)</li>
+        <li>공지사항 보기</li>
+    </ol>
+    <p>Check Point.</p>
+</aside>
+
+<script>
+$(function() {
+  $("#calendar").datepicker({
+    // 추가 옵션은 여기에
+  });
+});
+</script>
+
+</body>
+</html>
