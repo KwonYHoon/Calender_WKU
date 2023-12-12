@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+    <link rel="stylesheet" th:href="@{/css/signup.css}"> <!-- Use Thymeleaf to resolve the CSS file path -->
+</head>
+
+<body>
+<div id="con">
+    <div id="login">
+        <div id="login_form"><!--로그인 폼-->
+            <form th:action="@{/signup}" method="post">
+                <h3 class="login" style="letter-spacing:-1px;">회원가입</h3>
+                <hr>
+                <label>
+                    <p style="text-align: left; font-size:12px; color:#666">회원아이디</p>
+                    <input type="text" placeholder="아이디" class="size" name="userID">
+                    <p></p>
+                </label><!--아이디-->
+
+                <label>
+                    <p style="text-align: left; font-size:12px; color:#666">비밀번호 </p>
+                    <input type="password" placeholder="비밀번호" class="size" name="userPassword">
+                </label><!--비밀번호-->
+
+                <label>
+                    <p style="text-align: left; font-size:12px; color:#666"> </p>
+                    <input type="password" placeholder="비밀번호 확인" class="size" name="password_check">
+                </label><!--비밀번호 확인-->
+
+                <label>
+                    <p style="text-align: left; font-size:12px; color:#666">휴대폰번호</p>
+                    <select class="size num1" name="telecom">
+                        <option value="1" selected>SKT</option>
+                        <option value="2" selected>KT</option>
+                        <option value="3" selected>LG</option>
+                    </select>
+                    <input placeholder="-빼고 숫자만 입력"  class="size num2" name = "userPhonenumber" required>
+                </label> <!--전화번호-->
+
+                <label>
+                    <p style="text-align: left; font-size:12px; color:#666">E-mail</p>
+                    <input type="text" placeholder="이메일" class="size" name="userEmail">
+                </label> <!--이메일-->
+
+                <br>
+                <p>
+                    <input type="submit" value="Create Account" class="btn"> <!-- Fixed typo in button text -->
+                </p>
+            </form>
+            <hr>
+            <p class="find">
+                <span><a th:href="@{/signin}" >로그인 페이지로 이동</a></span>
+            </p>
+        </div>
+    </div><!--con-->
+</div>
+</body>
+</html>

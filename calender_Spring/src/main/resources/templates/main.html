@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>일정관리 메인페이지</title>
+    <link rel="stylesheet" th:href="@{//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css}">
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+    <script th:src="@{https://code.jquery.com/jquery-3.6.0.min.js}"></script>
+    <script th:src="@{https://code.jquery.com/ui/1.12.1/jquery-ui.js}"></script>
+</head>
+<body>
+
+<header>
+    <div class="search-container">
+        <input type="text" placeholder="검색" name="search">
+        <button type="submit">검색</button>
+    </div>
+    <div class="user-authentication">
+        <a th:href="@{/signin}">로그인</a> | <a th:href="@{/signup}">회원가입</a>
+    </div>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="#">일정관리</a></li>
+        <li><a href="#">팀관리</a></li>
+        <li><a href="#">공간대여</a></li>
+    </ul>
+</nav>
+
+<section class="cards-container">
+    <div class="card" id="card1">
+        <div id="calendar"></div>
+    </div>
+    <div class="card" id="card2">
+        <p>일정칸</p>
+        <!-- 여기에 일정 관련 콘텐츠를 추가할 수 있습니다. -->
+    </div>
+</section>
+
+<aside>
+    <h3>공지사항</h3>
+    <ol>
+        <li>일정칸: 일정리스트, 새 일정 등록, 기능 개발 중</li>
+        <li>캘린더 보기</li>
+        <li>일정 조율 (생성, 수정, 삭제)</li>
+        <li>공지사항 보기</li>
+    </ol>
+    <p>Check Point.</p>
+</aside>
+
+<script>
+    $(function() {
+        $("#calendar").datepicker({
+            dateFormat: 'yy-mm-dd',
+            monthNamesShort: ['1월', '2월', '3월', '4월', '5월', '6월','7월', '8월', '9월', '10월', '11월', '12월'],
+            dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],            weekHeader: 'Wk',
+            changeMonth: true, // 월변경가능
+            changeYear: true, // 년변경가능
+            yearRange: '2000:+5', // 연도 셀렉트 박스 범위
+            showMonthAfterYear: true, // 년 뒤에 월 표시
+            buttonImageOnly: true, // 이미지표시
+            buttonText: '날짜를 선택하세요',
+            autoSize: true, // 오토리사이즈(body등 상위태그의 설정에 따른다)
+            buttonImage: '/front/img/calendar_icon.png', // 이미지주소
+            showOn: "both" // 엘리먼트와 이미지 동시 사용
+        });
+    });
+</script>
+
+</body>
+</html>

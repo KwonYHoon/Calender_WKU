@@ -1,17 +1,19 @@
 package com.wku.calender.controller;
 
-import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
 
-@CrossOrigin(originPatterns = "http://localhost:3000")
-@RestController
-@RequestMapping("/")
+@Controller
 public class MainController {
+    @GetMapping("/")
+    public String showMainPage(Model model) {
+//        model.addAttribute("message", "안녕하세요!");
+        return "main";
+    }
 
-    @GetMapping("")
-    public String hello() {
-        return "Connection Successful";
+    @GetMapping("/signin")
+    public String showSigninPage(Model model) {
+        return "sign in";
     }
 }
