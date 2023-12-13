@@ -25,7 +25,6 @@
     <ul>
         <li><a href="#">일정관리</a></li>
         <li><a href="#">팀관리</a></li>
-        <li><a href="#">공간대여</a></li>
     </ul>
 </nav>
 
@@ -35,7 +34,25 @@
     </div>
     <div class="card" id="card2">
         <p>일정칸</p>
-        <!-- 여기에 일정 관련 콘텐츠를 추가할 수 있습니다. -->
+
+        <table border="1">
+            <thead>
+            <tr>
+                <th>팀 번호</th>
+                <th>일정</th>
+                <th>시작일</th>
+                <th>종료일</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="schedule : ${schedules}">
+                <td th:text="${schedule.teamCode}"></td>
+                <td th:text="${schedule.scheduleName}"></td>
+                <td th:text="${schedule.scheduleStart}"></td>
+                <td th:text="${schedule.scheduleEnd}"></td>
+            </tr>
+            </tbody>
+        </table>
     </div>
 </section>
 
