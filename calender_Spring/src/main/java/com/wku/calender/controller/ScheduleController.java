@@ -1,7 +1,7 @@
 package com.wku.calender.controller;
 
-import org.springframework.ui.Model;
 import com.wku.calender.entity.scheduleentity;
+import org.springframework.ui.Model;
 import com.wku.calender.service.ScheduleService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;

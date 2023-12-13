@@ -10,14 +10,23 @@ import lombok.NoArgsConstructor;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-@Entity(name="schedule")
-@Table(name="schedule")
+@Entity(name = "schedule")
+@Table(name = "schedule")
 public class scheduleentity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int scheduleCode;
+    @Column(name = "schedule_code", nullable = false, unique = true)
+    private Long scheduleCode;
+
+    @Column(name = "team_code", nullable = false)
     private int teamCode;
+
+    @Column(name = "schedule_name", nullable = false)
     private String scheduleName;
+
+    @Column(name = "schedule_start")
     private String scheduleStart;
+
+    @Column(name = "schedule_end")
     private String scheduleEnd;
 }
